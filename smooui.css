@@ -1,0 +1,147 @@
+/* Structure inspired by Scalable and Modular Architecture for CSS */
+/* http://smacss.com */
+
+/* 1. Base */
+/* For the sake of efficiency, I add resets on an as-needed basis */
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+}
+body, div {
+	margin: 0;
+	padding: 0;
+}
+div {
+	-webkit-box-sizing: border-box;
+	-mozbox-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.access-aid {
+	margin: 0;
+	padding: 0;
+	width: 0;
+	height: 0;
+	font-size: 0;
+}
+
+/* 2. Layout */
+/* Keep an eye on number rounding issues with layout-fluids */
+[class^="layout-"] {
+	/*border: 1px solid black;*/
+	float: left;
+}
+.layout-fluid-12 {
+	width: 100%;
+}
+.layout-fluid-9 {
+	width: 75%;
+}
+.layout-fluid-6 {
+	width: 50%;
+}
+.layout-fluid-4 {
+	width: 33.3333%;
+}
+.layout-fluid-3 {
+	width: 25%;
+}
+.layout-fluid-2 {
+	width: 16.6667%;
+}
+.layout-fluid-1 {
+	width: 8.3333%;
+}
+
+/* 3. Module */
+.module-nav-primary {
+	padding: 4em 0 2em 0;
+	text-align: center;	
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+}
+.module-nav-primary ul {
+	border-bottom: 2px solid #ddd;
+	padding: 2em 2em;
+}
+.module-nav-primary li {
+	display: inline;
+	font-size: 4rem;
+}
+.module-nav-secondary li {
+	list-style-type: none;
+	font-size: 2rem;
+}
+
+/* 4. State */
+.is- {
+
+}
+
+/* 5. Theme */
+/* Theme class should only be placed on BODY. */
+html {
+	font-size: 18px;
+}
+body.theme-smooui {
+	color: #ddd;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 1rem;
+	line-height: 25px;
+	letter-spacing: 0.2em;
+	/*text-shadow: 0 0 50px green;*/
+	background-image: -webkit-linear-gradient(90deg, #DD545E 10%, #723357 60%, #392254 80%, #2B1E53); /* For Chrome and Safari */
+}
+body.theme-smooui h2 {
+	font-weight: 300;
+}
+
+
+
+
+
+
+/* Test grids */
+[class^="block"] {
+	border: 1px solid black;
+	float: left;
+}
+.block-6x6 {
+	width: 50%;
+	height: 50%;
+	background-color: orange;
+}
+.block-6x2 {
+	width: 50%;
+	height: 16.6667%;
+	background-color: green;
+}
+.block-4x2 {
+	width: 33.3333%;
+	height: 16.6667%;
+	background-color: pink;
+}
+.block-4x1 {
+	width: 33.3333%;
+	height: 8.3333%;
+	background-color: brown;
+}
+.block-3x2 {
+	width: 25%;
+	height: 16.6667%;
+	background-color: yellow;
+}
+.block-2x2 {
+	width: 16.6667%;
+	height: 16.6667%;
+	background-color: teal;
+}
+.block-1x1 {
+	width: 8.3333%;
+	height: 8.3333%;
+	background-color: orchid;
+}
